@@ -34,7 +34,7 @@ class Program():
         remainM = 59 - min
         remainS = 59 - sec
         remaining_time_label.config(text='-'+str(remainH)+':'+str(remainM)+':'+str(remainS))
-        r_time = root.after(1000,Program.getRemainingTime)
+        r_time = root.after(1000,Program.getRemainingTime)   #Loop method
 
 class Window(tk.Frame):   #Window object
     def __init__(self,window):
@@ -60,7 +60,7 @@ class Window(tk.Frame):   #Window object
         remaining_time_frame.place(x=20,y=180)
         remaining_time_label.place(x=30,y=200)
 
-def start():
+def start():    #Run program
     Program.getDate()
     Program.getTomorrowDate()
     Program.getTime()
