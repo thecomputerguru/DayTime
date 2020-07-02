@@ -34,7 +34,7 @@ class Program():
         remainM = 59 - min
         remainS = 59 - sec
         remaining_time_label.config(text='-'+str(remainH)+':'+str(remainM)+':'+str(remainS))
-        r_time = root.after(1000,Program.getRemainingTime)   #Loop method
+        r_time = root.after(1000,Program.getRemainingTime)
 
 class Window(tk.Frame):   #Window object
     def __init__(self,window):
@@ -45,11 +45,11 @@ class Window(tk.Frame):   #Window object
         global current_date_label,current_time_label,next_date_label,remaining_time_label
         current_date_frame = tk.LabelFrame(self.window,text='Today',width=200,height=45)
         current_date_label = tk.Label(self.window,text='')
-        current_time_frame = tk.LabelFrame(self.window,text='Current Time',width=120,height=45)
+        current_time_frame = tk.LabelFrame(self.window,text='Current Time',width=200,height=45)
         current_time_label = tk.Label(self.window,text='')
         next_date_frame = tk.LabelFrame(self.window,text='Tomorrow',width=200,height=45)
         next_date_label = tk.Label(self.window,text='')
-        remaining_time_frame = tk.LabelFrame(self.window,text='Remaining time until next day',width=210,height=45)
+        remaining_time_frame = tk.LabelFrame(self.window,text='Remaining time in day',width=200,height=45)
         remaining_time_label = tk.Label(self.window,text='')
         current_date_frame.place(x=20,y=30)
         current_date_label.place(x=30,y=50)
@@ -60,13 +60,13 @@ class Window(tk.Frame):   #Window object
         remaining_time_frame.place(x=20,y=180)
         remaining_time_label.place(x=30,y=200)
 
-def start():    #Run program
+def start():   #Start program
     Program.getDate()
     Program.getTomorrowDate()
     Program.getTime()
     Program.getRemainingTime()
 
-root = tk.Tk()
-app = Window(root)
-start()
-root.mainloop()
+root = tk.Tk()   #Initialize tk interpreter
+app = Window(root)    #Initialize window
+start()   #Run program
+root.mainloop()   #Tk loop
