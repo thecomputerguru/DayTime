@@ -40,7 +40,7 @@ class Window(tk.Frame):   #Window object
     def __init__(self,window):
         tk.Frame.__init__(self,window)
         self.window = window
-        self.window.title('Daytime')
+        self.window.title('DayTime')
         self.window.geometry('245x260')
         global current_date_label,current_time_label,next_date_label,remaining_time_label
         current_date_frame = tk.LabelFrame(self.window,text='Today',width=200,height=45)
