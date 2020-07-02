@@ -54,7 +54,7 @@ class Window(tk.Frame):   #Window object
         current_date_frame.place(x=20,y=30)
         current_date_label.place(x=30,y=50)
         next_date_frame.place(x=20,y=80)
-        next_date_label.place(x=35,y=100)
+        next_date_label.place(x=30,y=100)
         current_time_frame.place(x=20,y=130)
         current_time_label.place(x=30,y=150)
         remaining_time_frame.place(x=20,y=180)
