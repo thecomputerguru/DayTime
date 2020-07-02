@@ -1,4 +1,4 @@
-#DayTime
+#Day    Time
 #
 #
 #Import modules
@@ -34,7 +34,7 @@ class Program():
         remainM = 59 - min
         remainS = 59 - sec
         remaining_time_label.config(text='-'+str(remainH)+':'+str(remainM)+':'+str(remainS))
-        r_time = root.after(1000,Program.getRemainingTime)
+        r_time = root.after(1000,Program.getRemainingTime)   #Loop method
 
 class Window(tk.Frame):   #Window object
     def __init__(self,window):
